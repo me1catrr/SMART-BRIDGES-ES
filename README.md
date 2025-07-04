@@ -39,16 +39,16 @@ El proyecto SMART-BRIDGES monitoriza puentes ferroviarios de alta velocidad 24/7
 ```
 SMART-BRIDGES-ES/
 │
-├── data_raw/ # Datos brutos de sensores
-├── data_processed/ # Datos filtrados y corregidos
-├── data_features/ # Features listas para ML
-├── metadata/ # Metadata (posición de sensores, info trenes)
-├── scripts/ # Scripts Julia de procesamiento
-├── notebooks/ # Notebooks de exploración
-├── models/ # Modelos entrenados
-├── reports/ # Informes generados
-├── logs/ # Logs de ejecución
-├── environment/ # Entorno Julia (Project.toml, Manifest.toml)
+├── data_raw/          # Datos brutos de sensores
+├── data_processed/    # Datos filtrados y corregidos
+├── data_features/     # Features listas para ML
+├── metadata/          # Metadata (posición de sensores, info trenes)
+├── scripts/           # Scripts Julia de procesamiento
+├── notebooks/         # Notebooks de exploración
+├── models/            # Modelos entrenados
+├── reports/           # Informes generados
+├── logs/              # Logs de ejecución
+├── environment/       # Entorno Julia (Project.toml, Manifest.toml)
 ├── .gitignore
 └── README.md
 ```
