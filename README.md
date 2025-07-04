@@ -36,7 +36,7 @@ El proyecto SMART-BRIDGES monitoriza puentes ferroviarios de alta velocidad 24/7
 
 ## 2. Estructura del proyecto
 
-SMART-BRIDGES-ES/
+```SMART-BRIDGES-ES/
 │
 ├── data_raw/ # Datos brutos de sensores
 ├── data_processed/ # Datos filtrados y corregidos
@@ -49,7 +49,7 @@ SMART-BRIDGES-ES/
 ├── logs/ # Logs de ejecución
 ├── environment/ # Entorno Julia (Project.toml, Manifest.toml)
 ├── .gitignore
-└── README.md
+└── README.md```
 
 ---
 
