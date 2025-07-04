@@ -1,5 +1,18 @@
 # SMART-BRIDGES-ES
 
+## ✨ Intro al proyecto
+
+**SMART-BRIDGES-ES** (ref. **PLEC2021-007798**) es un proyecto de I+D+i orientado a la **monitorización inteligente del estado estructural de puentes ferroviarios de alta velocidad**. Su objetivo es contribuir al mantenimiento predictivo de estas infraestructuras críticas mediante el uso de sensores MEMS, análisis avanzado de vibraciones y algoritmos de prognosis estructural basados en datos.
+
+España cuenta con más de **2.600 km de líneas de alta velocidad** y más de **200 puentes críticos**, muchos de ellos afectados por procesos de envejecimiento progresivo. Para abordar este reto, SMART-BRIDGES integra:
+
+- **Monitorización estructural inteligente (SHM)** en tiempo real.
+- Algoritmos de seguimiento de frecuencias dominantes y clasificación automática de patrones de vibración.
+- Creación de **gemelos digitales** que modelan y predicen la evolución del estado estructural.
+- Estrategias de **recolección de energía** (energy harvesting) para dotar de autonomía al sistema de monitorización.
+
+El proyecto está financiado en el marco del **Programa Estatal de I+D+i Orientada a los Retos de la Sociedad** (Convocatoria 2021) y coordinado por la **Universidad de Córdoba**, en colaboración con la **Universidad de Granada** e **INECO**, ingeniería de referencia del Administrador de Infraestructuras Ferroviarias de España (**ADIF**).
+
 **Análisis de vibraciones en puentes ferroviarios de alta velocidad monitorizados mediante acelerómetros MEMS.**
 
 Este repositorio contiene el flujo de trabajo completo para:
