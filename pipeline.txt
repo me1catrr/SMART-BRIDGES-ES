@@ -1,0 +1,46 @@
+1. Preprocesado
+
+- Filtros (band-pass, notch)
+- Normalización
+- Transformadas (FFT, wavelets, espectrogramas)
+
+2. Extracción de características
+
+- Estadísticas en el tiempo
+- Estadísticas en frecuencia
+- Transformadas wavelet
+- Envelope spectrum si buscas defectos de alta frecuencia
+
+Amplitud máxima del transitorio
+Energía total
+Espectro de frecuencia
+Tiempo de decaimiento
+Factor de cresta
+Wavelet packet energy
+
+3. Modelado y evaluación
+
+- Modelo supervisado (si tienes etiquetas de eventos anómalos): Random Forest y SVM
+- Modelo no supervisado (habitual, porque normalmente no tienes muchas fallas): Autoencoder entrenado solo con eventos normales, One-Class SVM sobre features y Isolation Forest
+- Umbral dinámico de alerta: Basado en distancia de reconstrucción o puntuación de outlier
+
+Modelar la variabilidad normal de estos parámetros usando:
+One-Class SVM (detección de outliers).
+Isolation Forest.
+
+Deep Learning Autoencoders sobre la forma de onda:
+
+Aprender la “firma” del transitorio típico.
+Detectar desviaciones por reconstrucción deficiente.
+Ventaja: modela complejidades no capturadas por las features físicas.
+Event alignment & dynamic time warping (DTW):
+
+Alinear señales cuando el tiempo de llegada varía.
+Evitar que cambios de velocidad se interpreten como anomalías.
+Transformers / TCN si se quiere modelar secuencias largas (p. ej., varios pasos de tren en días sucesivos).
+
+4. Visualización
+
+- Históricos de energía y amplitud
+- Mapas de calor de espectros
+- Gráficas de puntuación de anomalía por evento

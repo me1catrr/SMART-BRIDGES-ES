@@ -1,0 +1,35 @@
+https://dataframes.juliadata.org/stable/man/working_with_dataframes/
+https://discourse.julialang.org/t/convert-time-interval-to-seconds/3806/4
+https://www.geeksforgeeks.org/julia/working-with-csv-files-in-julia/
+
+include("../src/acc_data.jl")
+
+# Ruta basada en la ubicación del archivo main.jl
+basedir = normpath(joinpath(@__DIR__, ".."))
+csv_path = joinpath(basedir, "data", "exp_raw", "acceleration_04-28-43.csv")
+
+# Calcular tiempo transcurrido
+df = CSV.read(path, DataFrame)
+
+    # Extraer tiempos como strings
+    start_str = df[2, 1]
+    end_str = df[end, 1]
+
+    # Parsear strings a objetos Time
+    start_time = Time(start_str)
+    end_time = Time(end_str)
+
+    # Diferencia en segundos
+    elapsed = Dates.value(end_time - start_time) / 1_000.0
+elapsed = elapsed_seconds_from_csv(csv_path)
+println("Tiempo transcurrido entre segunda y última fila: $elapsed segundos")
+
+# (Opcional) agregar columna con tiempo relativo en segundos
+# Suponiendo que df[!, 1] tiene el tiempo en string
+start_time = Time(df[2, 1])
+df.time_seconds = map(t -> (Time(t) - start_time).value / 1_000.0, df[!, 1])
+
+# Graficar eje X
+plot(df.time_seconds, df[!, "x_accel (g)"],
+     xlabel = "Tiempo (s)", ylabel = "Aceleración X (g)",
+     title = "Eje X vs Tiempo", legend = false)
