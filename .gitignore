@@ -1,0 +1,45 @@
+# =====================
+# Julia
+# =====================
+*.jl.cov
+*.jl.*.cov
+*.jl.mem
+*.jl.*.mem
+*.jl.prof
+*.jl.*.prof
+*.ji
+*.so
+*.dylib
+*.dll
+.DS_Store
+
+# Julia package environments
+Manifest.toml
+
+# Precompiled files
+.julia/
+
+# =====================
+# Proyecto SMART-BRIDGES
+# =====================
+# Datos confidenciales
+data/
+results/
+results_check/
+plots/
+Horario paso tren*/
+*.csv
+*.png
+*.jpg
+*.jpeg
+*.pdf
+
+# Archivos temporales
+*.tmp
+*.log
+
+# =====================
+# Editor / Sistema
+# =====================
+.vscode/
+.idea/
